@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:shape_patterns/shape_pattern.dart';
 
 class PatternScaffold extends StatefulWidget {
-
   ///This widget wraps the body of a [Scaffold] in a [Stack] widget and renders a pattern
   const PatternScaffold({
     Key key,
@@ -20,7 +19,8 @@ class PatternScaffold extends StatefulWidget {
     this.backgroundColor,
     this.resizeToAvoidBottomPadding = true,
     this.primary = true,
-  }) : assert(primary != null), super(key: key);
+  })  : assert(primary != null),
+        super(key: key);
 
   final ShapePattern pattern;
   final PreferredSizeWidget appBar;
@@ -37,7 +37,6 @@ class PatternScaffold extends StatefulWidget {
   final bool resizeToAvoidBottomPadding;
   final bool primary;
 
-
   @override
   _PatternScaffoldState createState() => _PatternScaffoldState();
 }
@@ -45,28 +44,28 @@ class PatternScaffold extends StatefulWidget {
 class _PatternScaffoldState extends State<PatternScaffold> {
   @override
   Widget build(BuildContext context) => Scaffold(
-    appBar: widget.appBar,
-    body: _body(),
-    backgroundColor: widget.backgroundColor,
-    bottomNavigationBar: widget.bottomNavigationBar,
-    bottomSheet: widget.bottomSheet,
-    drawer: widget.drawer,
-    endDrawer: widget.endDrawer,
-    floatingActionButton: widget.floatingActionButton,
-    floatingActionButtonAnimator: widget.floatingActionButtonAnimator,
-    floatingActionButtonLocation: widget.floatingActionButtonLocation,
-    key: widget.key,
-    persistentFooterButtons: widget.persistentFooterButtons,
-    primary: widget.primary,
-    resizeToAvoidBottomPadding: widget.resizeToAvoidBottomPadding,
-  );
+        appBar: widget.appBar,
+        body: _body(),
+        backgroundColor: widget.backgroundColor,
+        bottomNavigationBar: widget.bottomNavigationBar,
+        bottomSheet: widget.bottomSheet,
+        drawer: widget.drawer,
+        endDrawer: widget.endDrawer,
+        floatingActionButton: widget.floatingActionButton,
+        floatingActionButtonAnimator: widget.floatingActionButtonAnimator,
+        floatingActionButtonLocation: widget.floatingActionButtonLocation,
+        key: widget.key,
+        persistentFooterButtons: widget.persistentFooterButtons,
+        primary: widget.primary,
+        resizeToAvoidBottomPadding: widget.resizeToAvoidBottomPadding,
+      );
 
-  _body() =>  Container(
-    child: Stack(
-      children: <Widget>[
-        widget.pattern,
-        widget.body
-      ],
-    ),
-  );
+  _body() => Container(
+        child: Stack(
+          children: <Widget>[
+            widget.pattern,
+            widget.body != null ? widget.body : Container(),
+          ],
+        ),
+      );
 }

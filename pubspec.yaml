@@ -1,0 +1,19 @@
+name: shape_patterns
+description: a flutter widget for making patterns using geometric shapes
+version: 0.0.1
+author: Musa Usman <barbaricgamester@gmail.com>
+homepage: https://github.com/barbaricgamester/shape_patterns
+
+environment:
+  sdk: ">=2.0.0-dev.68.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: false

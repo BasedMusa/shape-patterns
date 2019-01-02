@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:shape_patterns/shape.dart';
+import 'package:shape_patterns/shape_pattern.dart';
 
 class PatternScaffold extends StatefulWidget {
 
@@ -22,7 +22,7 @@ class PatternScaffold extends StatefulWidget {
     this.primary = true,
   }) : assert(primary != null), super(key: key);
 
-  final Pattern pattern;
+  final ShapePattern pattern;
   final PreferredSizeWidget appBar;
   final Widget body;
   final Widget floatingActionButton;

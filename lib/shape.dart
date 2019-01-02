@@ -4,18 +4,18 @@ import 'package:shape_patterns/shape_clippers/diamond.dart';
 import 'package:shape_patterns/shape_clippers/slash.dart';
 import 'package:shape_patterns/shape_clippers/triangle.dart';
 
-class PatternShape extends StatefulWidget {
+class Shape extends StatefulWidget {
   final String shapeName;
   final double size;
   final Color color;
 
-  PatternShape(this.shapeName, {this.size, this.color});
+  Shape(this.shapeName, {this.size, this.color});
 
   @override
-  _PatternShapeState createState() => _PatternShapeState();
+  _ShapeState createState() => _ShapeState();
 }
 
-class _PatternShapeState extends State<PatternShape> {
+class _ShapeState extends State<Shape> {
   @override
   Widget build(BuildContext context) => ClipPath(
         clipper: _clipper(),
@@ -28,26 +28,26 @@ class _PatternShapeState extends State<PatternShape> {
 
   _clipper() {
     switch (widget.shapeName) {
-      case PatternShapes.triangle:
+      case ShapeNames.triangle:
         return TriangleClipper();
         break;
-      case PatternShapes.square:
+      case ShapeNames.square:
         return null;
         break;
-      case PatternShapes.diamond:
+      case ShapeNames.diamond:
         return DiamondClipper();
         break;
-      case PatternShapes.circle:
+      case ShapeNames.circle:
         return CircleClipper();
         break;
-      case PatternShapes.slash:
+      case ShapeNames.slash:
         return SlashClipper();
         break;
     }
   }
 }
 
-class PatternShapes {
+class ShapeNames {
   static const triangle = 'PATTERN_SHAPE_TRIANGLE';
   static const square = 'PATTERN_SHAPE_SQUARE';
   static const diamond = 'PATTERN_SHAPE_DIAMOND';

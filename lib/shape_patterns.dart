@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:shape_patterns/pattern_shape.dart';
+import 'package:shape_patterns/shape.dart';
 
-class ShapePattern extends StatefulWidget {
+class Pattern extends StatefulWidget {
   final String shapeName;
   final double shapeMargins;
   final Color shapeColor;
@@ -10,7 +10,7 @@ class ShapePattern extends StatefulWidget {
   final int numberOfColumns;
   final double angle;
 
-  ShapePattern(
+  Pattern(
       {@required this.shapeName,
         this.numberOfColumns = 10,
         this.numberOfRows = 25,
@@ -22,12 +22,12 @@ class ShapePattern extends StatefulWidget {
         this.shapeColor = const Color(0xFF757575)});
 
   @override
-  ShapePatternState createState() {
-    return new ShapePatternState();
+  PatternState createState() {
+    return new PatternState();
   }
 }
 
-class ShapePatternState extends State<ShapePattern> {
+class PatternState extends State<Pattern> {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -46,7 +46,7 @@ class ShapePatternState extends State<ShapePattern> {
           margin: EdgeInsets.all(widget.shapeMargins / 2),
           child: Transform.rotate(
             angle: widget.angle,
-            child: PatternShape(widget.shapeName, color: widget.shapeColor, size: widget.shapeSize),
+            child: Shape(widget.shapeName, color: widget.shapeColor, size: widget.shapeSize),
           )));
     }
 

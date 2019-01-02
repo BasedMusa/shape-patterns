@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:shape_patterns/pattern_shape.dart';
+import 'package:shape_patterns/shape.dart';
 
-class PatternBackgroundScaffold extends StatefulWidget {
+class PatternScaffold extends StatefulWidget {
 
   ///This widget wraps the body of a [Scaffold] in a [Stack] widget and renders a pattern
-  const PatternBackgroundScaffold({
+  const PatternScaffold({
     Key key,
     @required this.shapePattern,
     this.appBar,
@@ -22,7 +22,7 @@ class PatternBackgroundScaffold extends StatefulWidget {
     this.primary = true,
   }) : assert(primary != null), super(key: key);
 
-  final PatternShape shapePattern;
+  final Shape shapePattern;
   final PreferredSizeWidget appBar;
   final Widget body;
   final Widget floatingActionButton;
@@ -39,10 +39,10 @@ class PatternBackgroundScaffold extends StatefulWidget {
 
 
   @override
-  _PatternBackgroundScaffoldState createState() => _PatternBackgroundScaffoldState();
+  _PatternScaffoldState createState() => _PatternScaffoldState();
 }
 
-class _PatternBackgroundScaffoldState extends State<PatternBackgroundScaffold> {
+class _PatternScaffoldState extends State<PatternScaffold> {
   @override
   Widget build(BuildContext context) => Scaffold(
     appBar: widget.appBar,

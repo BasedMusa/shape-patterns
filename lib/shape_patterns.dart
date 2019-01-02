@@ -32,12 +32,12 @@ class PatternState extends State<Pattern> {
   Widget build(BuildContext context) {
     return Container(
       child: Column(
-        children: _approach1(),
+        children: _generateChildren(),
       ),
     );
   }
 
-  _approach1() {
+  _generateChildren() {
     List<Widget> _widgetList = new List();
     List<Widget> _columns = new List();
 

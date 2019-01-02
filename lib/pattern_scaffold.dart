@@ -6,7 +6,7 @@ class PatternScaffold extends StatefulWidget {
   ///This widget wraps the body of a [Scaffold] in a [Stack] widget and renders a pattern
   const PatternScaffold({
     Key key,
-    @required this.shapePattern,
+    @required this.pattern,
     this.appBar,
     this.body,
     this.floatingActionButton,
@@ -22,7 +22,7 @@ class PatternScaffold extends StatefulWidget {
     this.primary = true,
   }) : assert(primary != null), super(key: key);
 
-  final Shape shapePattern;
+  final Pattern pattern;
   final PreferredSizeWidget appBar;
   final Widget body;
   final Widget floatingActionButton;
@@ -64,7 +64,7 @@ class _PatternScaffoldState extends State<PatternScaffold> {
   _body() =>  Container(
     child: Stack(
       children: <Widget>[
-        widget.shapePattern,
+        widget.pattern,
         widget.body
       ],
     ),

@@ -1,6 +1,6 @@
 # shape_patterns
 
-A flutter widget for making patterns from shapes
+a flutter widget for making patterns from shapes
 
 ## Usage
 Import the following dependencies

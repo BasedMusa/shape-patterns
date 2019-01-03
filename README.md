@@ -1,4 +1,5 @@
-# shape_patterns
+<img src="thumb.png" width="220">
+<br/><br/>
 
 a mordern flutter widget for making patterns from shapes
 

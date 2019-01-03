@@ -1,4 +1,4 @@
-<img src="thumb.png" width="220">
+<img src="thumb.png" width="300">
 <br/><br/>
 
 a mordern flutter widget for making patterns from shapes

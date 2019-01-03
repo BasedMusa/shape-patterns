@@ -1,7 +1,7 @@
 <img src="thumb.png" width="300">
 <br/><br/>
 
-a mordern flutter widget for making patterns from shapes
+A flutter widget for making patterns from shapes
 
 ## Usage
 Import the following dependencies
@@ -44,4 +44,8 @@ PatternScaffold(
         title: Text('Shape Patterns Example'),
       ),
     );
+<<<<<<< HEAD
 ```
+=======
+```
+>>>>>>> 5a409683b8ba00ca9da64d5cc55f2e1b600fec8c
